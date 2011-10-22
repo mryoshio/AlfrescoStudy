@@ -2,10 +2,7 @@
 <!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans-2.0.dtd'>
 
 <beans>
-
-    <bean id="webscript.tachibanakikaku.hello_java.get" class="com.tachibanakikaku.HelloJava" parent="webscript">
-      <property name="authenticationService" ref="AuthenticationService" />
-    </bean>
-
-
+  <bean id="webscript.tachibanakikaku.hello_java.get" class="com.tachibanakikaku.HelloJava" parent="webscript">
+    <property name="authenticationService" ref="AuthenticationService" />
+  </bean>
 </beans>

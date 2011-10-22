@@ -1,0 +1,13 @@
+= Alfresco Study
+著者:: mryoshio (yoshiokaas _at_ gmail.com)
+作成日:: 2011/10/22
+ライセンス:: GNU LGPL v3
+
+= 本プロジェクトについて
+- Alfresco勉強会で使用したソースコードです。
+
+= リポジトリ内ファイルの説明
+* README ... 本ファイルです。必ず目を通してください。
+* action ... 「アクション」テーマ回のソースコード
+* webscript ... 「Web Script」テーマ回のソースコード
+
