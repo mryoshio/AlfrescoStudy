@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Hello</shortname>
+  <description>Simple webscript to print Hello</description>
+  <url>/tachibanakikaku/hello</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+</webscript>
