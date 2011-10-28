@@ -38,7 +38,7 @@ public class HelloJava extends DeclarativeWebScript {
     protected Map<String, Object> executeImpl(WebScriptRequest req,
             Status status, Cache cache) {
         Map<String, Object> model = new HashMap<String, Object>();
-        String result = "Hello, " + authenticationService.getCurrentUserName();
+        String result = "Hello by Java, " + authenticationService.getCurrentUserName();
         model.put("result", result);
         return model;
     }
