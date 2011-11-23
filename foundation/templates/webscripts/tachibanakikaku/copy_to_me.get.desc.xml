@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Copy to Me</shortname>
+  <description>contents in the specified space to my home</description>
+  <url>/tachibanakikaku/copy_to_me</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+</webscript>

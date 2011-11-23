@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans-2.0.dtd'>
+
+<beans>
+  <bean id="webscript.tachibanakikaku.copy_to_me.get" class="com.tachibanakikaku.CopyToMe" parent="webscript">
+    <property name="authenticationService" ref="AuthenticationService" />
+    <property name="fileFolderService" ref="FileFolderService" />
+    <property name="nodeService" ref="NodeService" />
+    <property name="personService" ref="PersonService" />
+  </bean>
+</beans>
