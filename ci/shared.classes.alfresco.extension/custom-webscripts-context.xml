@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans-2.0.dtd'>
+
+<beans>
+
+	<bean id="webscript.com.tachibanakikaku.sample.hello_ci.get" class="com.tachibanakikaku.webscripts.HelloCI"
+		parent="webscript">
+	</bean>
+
+</beans>

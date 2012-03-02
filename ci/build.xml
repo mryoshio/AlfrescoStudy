@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<project name="Hello CI WebScript" default="deploy" basedir=".">
+
+	<property name="project.dir" value="." />
+	<property name="build.dir" value="${project.dir}/build" />
+	<property name="ext.dir" value="${project.dir}/shared.classes.alfresco.extension" />
+	<property name="lib.dir" value="${project.dir}/lib" />
+	<property name="jar.file" value="helloci.jar" />
+	<property name="alf.home.dir" value="${user.home}/opt/alfresco/com40d" />
+	<property name="alf.lib.dir" value="${alf.home.dir}/webapps/alfresco/WEB-INF/lib" />
+	<property name="alf.ext.dir" value="${alf.home.dir}/shared/classes/alfresco/extension" />
+
+
+	<path id="class.path">
+		<dirset dir="${build.dir}" />
+		<fileset dir="${alf.home.dir}" includes="**/*.jar" />
+		<fileset dir="${alf.lib.dir}" includes="**/*.jar" />
+	</path>
+
+	<target name="compile">
+		<mkdir dir="${build.dir}" />
+		<javac classpathref="class.path" srcdir="${project.dir}/src" destdir="${build.dir}" />
+	</target>
+
+	<target name="package" depends="compile">
+		<jar basedir="${build.dir}" jarfile="${lib.dir}/${jar.file}" />
+	</target>
+
+	<target name="deploy" depends="package">
+		<copy todir="${alf.ext.dir}" verbose="on">
+			<fileset dir="${ext.dir}" />
+		</copy>
+		<copy todir="${alf.lib.dir}" verbose="on">
+			<fileset dir="${lib.dir}" />
+		</copy>
+
+	</target>
+
+</project>
