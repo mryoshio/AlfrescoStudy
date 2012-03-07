@@ -1,3 +1,4 @@
-ci/bin
-ci/build
-ci/lib
+ci_maven/target
+ci_maven/.classpath  
+ci_maven/.project    
+ci_maven/.settings

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<project name="Hello CI WebScript" default="copy-resources" basedir=".">
+	<property name="alf.home.dir" value="${user.home}/opt/alfresco/com40d" />
+	<property name="alf.lib.dir" value="${alf.home.dir}/webapps/alfresco/WEB-INF/lib" />
+	<property name="alf.ext.dir" value="${alf.home.dir}/shared/classes/alfresco/extension" />
+	<property name="ext.dir" value="src/shared.classes.alfresco.extension" />
+	<property name="jar.file" value="target/*.jar" />
+	<target name="copy-resources">
+		<copy todir="${alf.ext.dir}" verbose="on" overwrite="true">
+			<fileset dir="${ext.dir}" />
+		</copy>
+		<copy todir="${alf.lib.dir}" verbose="on" overwrite="true">
+			<fileset file="${jar.file}" />
+		</copy>
+
+	</target>
+</project>
