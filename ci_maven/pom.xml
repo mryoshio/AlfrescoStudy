@@ -99,9 +99,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <surfVersion>1.0.0-RC2</surfVersion>
-        <alfresco.home.dir>${user.home}/opt/alfresco/com40d</alfresco.home.dir>
-        <alfresco.lib.dir>${alfresco.home.dir}/webapps/alfresco/WEB-INF/lib</alfresco.lib.dir>
-        <alfresco.ext.dir>${alfresco.home.dir}/shared/classes/alfresco/extension</alfresco.ext.dir>
     </properties>
 
 </project>
