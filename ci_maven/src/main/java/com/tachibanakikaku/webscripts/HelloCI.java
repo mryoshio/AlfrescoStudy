@@ -19,6 +19,7 @@ package com.tachibanakikaku.webscripts;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import org.springframework.extensions.webscripts.Cache;
 import org.springframework.extensions.webscripts.DeclarativeWebScript;
@@ -27,12 +28,24 @@ import org.springframework.extensions.webscripts.WebScriptRequest;
 
 public class HelloCI extends DeclarativeWebScript {
 
+	private static int RANDOM_MAX = 100;
+
 	@Override
 	protected Map<String, Object> executeImpl(WebScriptRequest req,
 			Status status, Cache cache) {
+
 		Map<String, Object> model = new HashMap<String, Object>();
-		String result = "Hello CI!";
-		model.put("result", result);
+		model.put("result", getResultMessage());
+
 		return model;
+	}
+
+	private String getResultMessage() {
+		Random random = new Random(System.currentTimeMillis());
+		int r = random.nextInt(RANDOM_MAX);
+		String f = "Your number is %s.";
+		String m = "";
+		m = String.format(f, new Object[] { r });
+		return m;
 	}
 }

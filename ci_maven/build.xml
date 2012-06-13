@@ -13,6 +13,5 @@
 		<copy todir="${alf.lib.dir}" verbose="on" overwrite="true">
 			<fileset file="${jar.file}" />
 		</copy>
-
 	</target>
 </project>
