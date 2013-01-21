@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>CreateNode</shortname>
+  <description>Create New Node</description>
+  <url>/mryoshio/create_node</url>
+  <authentication>user</authentication>
+</webscript>
